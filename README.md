@@ -46,13 +46,13 @@
 
 Web storage is being standardized by the [World Wide Web Consortium (W3C)](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium). It was originally part of the [HTML5](https://en.wikipedia.org/wiki/HTML5) specification, but is now in a separate specification.
 
-Modern websites and web applications these days are becoming smarter than before and to achieve such smartness, data storage system plays a very crucial role. Be it storing visitors data & settings or any kind of information, web-storage is a breakthrough in the history of web applications. It offers a very basic need of storing persistant data in the browser itself which has literally spurred up its application from game-changing novelty to musht-have features.
+Modern websites and web applications these days are becoming smarter than before and to achieve such smartness, the data storage system plays a very crucial role. Be it storing visitors' data & settings or any kind of information, web-storage is a breakthrough in the history of web applications. It offers a very basic need of storing persistent data in the browser itself which has literally spurred up its application from game-changing novelty to must-have features.
 
-Usually, this kind of data doesn't need a well-organized backend database. The purpose of the data varies as per the website/webapp requirements. Different pages of the same website need to share data among themselves to behave alike and perfectly. This sharing of data among windows/tabs is very common these days and most of the sites or web apps use it for various jobs like User Authentication, Personalization(showing different views to a new visitor and on subsequent visits), Tracking user behavior, etc.
+Usually, this kind of data doesn't need a well-organized backend database. The purpose of the data varies as per the website/webapp requirements. Different pages of the same website need to share data among themselves to behave alike and perfectly. This sharing of data among windows/tabs is very common these days and most of the sites or web apps use it for various jobs like User Authentication, Personalization (showing different views to a new visitor and on subsequent visits), Tracking user behavior, etc.
 
 Before HTML5, storing application level data was possible only using cookies. Cookies can store up to 4KB of data, including the bytes consumed by the cookie name. This domain-specific data is sent along with every browser request. With the advent of HTML5, it's much easier now to store structured data on the client-side securely and faster than ever. HTML5 introduced the concept of Web Storage. Web storage can be viewed simplistically as an improvement on cookies, providing much greater storage capacity. HTML5 introduces two such web storage mechanisms: LocalStorage and SessionStorage. There are so many limitations in using cookies which can now be overcome using web storage.
 
-There's no term as "Perfectly Secured Persistent Storage" available in the browsers as any type of storage system(persistent or non-persistent) can be manually tweaked by the end-user(assuming she knows a bit of geeky stuff :P).
+There's no term as "Perfectly Secured Persistent Storage" available in the browsers as any type of storage system( persistent or non-persistent) can be manually tweaked by the end-user(assuming she knows a bit of geeky stuff :P).
 
 #### Web Storage concepts and usage
 
@@ -80,7 +80,7 @@ The two mechanisms within Web Storage are as follows:
 
 ### Different Storage APIs
 
-Following are various storage techniques which HTML% storage provides. Each technique has its own pros and cons.
+Following are various storage techniques which HTML5 storage provides. Each technique has its own pros and cons.
 
 #### [Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
 
@@ -98,10 +98,10 @@ Following are various storage techniques which HTML% storage provides. Each tech
 
 * Typically, the following are allowed:
 
-    300 cookies in total
-    4096 bytes per cookie
-    20 cookies per domain
-    81920 bytes per domain(Given 20 cookies of max size 4096 = 81920 bytes.)
+    * 300 cookies in total
+    * 4096 bytes per cookie
+    * 20 cookies per domain
+    * 81920 bytes per domain(Given 20 cookies of max size 4096 = 81920 bytes.)
 
 ##### API
 

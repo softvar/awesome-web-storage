@@ -184,7 +184,7 @@ Following are various storage techniques which HTML5 storage provides. Each tech
     | method      | localStorage.setItem(key, value) |
     | params      | key(String/Number),<br>value(Number/String),<br>though it accepts other types, the value is always stored as a string, so, stringifying data before storing is preferred and the best way to avoid errors while reading |
     | description | adds the key to the storage with the value, or update the key's value if it already exists. |
-    | example     | localStorage.getItem('test', document.getElementById('js-btn').value); |
+    | example     | localStorage.setItem('test', document.getElementById('js-btn').value); |
 
 2. `getItem`
 
@@ -273,7 +273,7 @@ Following are various storage techniques which HTML5 storage provides. Each tech
     | method      | sessionStorage.setItem(key, value) |
     | params      | key(String/Number),<br>value(Number/String),<br>though it accepts other types, the value is always stored as a string, so, stringifying data before storing is preferred and the best way to avoid errors while reading |
     | description | adds the key to the storage with the value, or update the key's value if it already exists. |
-    | example     | sessionStorage.getItem('test', document.getElementById('js-btn').value); |
+    | example     | sessionStorage.setItem('test', document.getElementById('js-btn').value); |
 
 2. `getItem`
 

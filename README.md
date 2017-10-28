@@ -28,7 +28,7 @@
     - [Cons](#cons-2)
     - [API](#api-2)
     - [Useful resources](#resources-2)
-- [Comparson Table](comparison-table)
+- [Comparison Table](comparison-table)
 - [PostMessage](#postmessage)
     - [Pros](#pros-3)
     - [Cons](#cons-3)

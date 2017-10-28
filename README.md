@@ -29,11 +29,12 @@
     - [API](#api-2)
     - [Useful resources](#resources---more-on-sessionstorage)
 - [Comparison Table](comparison-table)
-- [PostMessage](#worth-mentioning-api-for-tackiling-cross-origin-restriction)
+- [PostMessage](#worth-mentioning-api-for-tackling-cross-origin-restriction)
     - [Pros](#pros-3)
     - [Cons](#cons-3)
     - [API](#api-3)
-    - [Useful resources](#resources-3)
+    - [Security concerns](#security-concerns)
+    - [Useful resources](#resources---more-on-postmessage)
 - [FAQs](#faqs)
 - [Contributing](#contributing-guidelines)
 - [License](#license)
@@ -368,6 +369,41 @@ Following are various storage techniques which HTML5 storage provides. Each tech
 * Need to open a window from the current window and only then can communicate as long as you keep the windows open.
 
 * Security concerns - Sending strings via postMessage is that you will pick up other postMessage events published by other JavaScript plugins, so be sure to implement a targetOrigin and a sanity check for the data being passed on to the messages listener.
+
+##### API:
+
+```js
+otherWindow.postMessage(message, targetOrigin, [transfer]);
+```
+
+**otherWindow** - A reference to another window; such a reference may be obtained, for example, using the `contentWindow` property of an `iframe` element, the object returned by [window.open](https://developer.mozilla.org/en-US/docs/Web/API/Window/open), or by named or numeric index on [Window.frames](https://developer.mozilla.org/en-US/docs/Web/API/Window/frames), if you're trying to start the communication from iframe to [parent](https://developer.mozilla.org/en-US/docs/Web/API/Window/parent) window then parent is also a valid reference
+
+**message** - Data to be sent to the other window. The data is serialized using the [structured clone algorithm](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm). This means you can pass a broad variety of data objects safely to the destination window without having to serialize them yourself. [1]
+
+**targetOrigin** - Specifies what the origin of `otherWindow` must be for the event to be dispatched, either as the literal string `"*"` (indicating no preference) or as a URI. If at the time the event is scheduled to be dispatched the scheme, hostname, or port of otherWindow's document does not match that provided in `targetOrigin`, the event will not be dispatched; only if all three match will the event be dispatched. This mechanism provides control over where messages are sent; for example, if `postMessage()` was used to transmit a password, it would be absolutely critical that this argument be a URI whose origin is the same as the intended receiver of the message containing the password, to prevent interception of the password by a malicious third party. **Always provide a specific targetOrigin, not `*`, if you know where the other window's document should be located. Failing to provide a specific target discloses the data you send to any interested malicious site.**
+
+**transfer**(*Optional*) -  Is a sequence of [Transferable](https://developer.mozilla.org/en-US/docs/Web/API/Transferable) objects that are transferred with the message. The ownership of these objects is given to the destination side and they are no longer usable on the sending side.
+
+##### Security concerns
+
+**If you do not expect to receive messages from other sites, do not add any event listeners for `message` events**. This is a completely foolproof way to avoid security problems.
+
+If you do expect to receive messages from other sites, **always verify the sender's identity** using the `origin` and possibly `source` properties. Any window (including, for example, `http://evil.example.com)` can send a message to any other window, and you have no guarantees that an unknown sender will not send malicious messages. Having verified identity, however, you still should **always verify the syntax of the received message**. Otherwise, a security hole in the site you trusted to send only trusted messages could then open a cross-site scripting hole in your site.
+
+**Always specify an exact target origin, not `*`, when you use postMessage to send data to other windows.** A malicious site can change the location of the window without your knowledge, and therefore it can intercept the data sent using `postMessage`.
+
+##### Resources - more on postMessage:
+
+- Blogs
+	- [HTML5's window.postMessage API](https://davidwalsh.name/window-postmessage)
+	- [Cross-Domain Messaging With postMessage](http://blog.teamtreehouse.com/cross-domain-messaging-with-postmessage)
+	- [The pitfalls of postMessage](https://labs.detectify.com/2016/12/08/the-pitfalls-of-postmessage/)
+	- [XSS and App Security through HTML5's PostMessage()](https://community.saas.hpe.com/t5/Protect-Your-Assets/XSS-and-App-Security-through-HTML5-s-PostMessage/ba-p/266645#.WfRDnBNL_GI)
+- Libraries
+	- [postmate](https://github.com/dollarshaveclub/postmate) - A powerful, simple, promise-based postMessage library.
+	- [across-tabs](https://github.com/wingify/across-tabs) - Easy communication between cross-origin browser tabs.
+- Browser Extensions
+	- [postMessage debugger](https://chrome.google.com/webstore/detail/postmessage-debugger/kjfjellokbmlooidpiaolkpmghbladpi?hl=en) - This extension prints messages sent with postMessage to the console.
 
 ### FAQs
 

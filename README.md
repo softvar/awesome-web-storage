@@ -17,25 +17,25 @@
     - [Pros](#pros)
     - [Cons](#cons)
     - [API](#api)
-    - [Useful resources](#resources)
+    - [Useful resources](#resources---more-on-cookies)
 - [LocalStorage](#localstorage)
     - [Pros](#pros-1)
     - [Cons](#cons-1)
     - [API](#api-1)
-    - [Useful resources](#resources-1)
+    - [Useful resources](#resources---more-on-localstorage)
 - [SessionStorage](#sessionstorage)
     - [Pros](#pros-2)
     - [Cons](#cons-2)
     - [API](#api-2)
-    - [Useful resources](#resources-2)
+    - [Useful resources](#resources---more-on-sessionstorage)
 - [Comparison Table](comparison-table)
-- [PostMessage](#postmessage)
+- [PostMessage](#worth-mentioning-api-for-tackiling-cross-origin-restriction)
     - [Pros](#pros-3)
     - [Cons](#cons-3)
     - [API](#api-3)
     - [Useful resources](#resources-3)
 - [FAQs](#faqs)
-- [Contributing](#contributing)
+- [Contributing](#contributing-guidelines)
 - [License](#license)
 
 ### Introduction
@@ -351,7 +351,7 @@ Following are various storage techniques which HTML5 storage provides. Each tech
 | **Size limits info**              | [limit](http://browsercookielimits.squawky.net/) | [limit](https://arty.name/localstorage.html) | [limit](https://stackoverflow.com/questions/15840976/how-large-is-html5-session-storage)
 
 
-#### Worth mentioning API for cross-origin restriction
+#### Worth mentioning API for tackling cross-origin restriction
 
 [postMessage](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage)
 

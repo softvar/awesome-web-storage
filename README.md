@@ -153,6 +153,7 @@ Following are various storage techniques which HTML5 storage provides. Each tech
     - [Cookie Inspector](https://chrome.google.com/webstore/detail/cookie-inspector/jgbbilmfbammlbbhmmgaagdkbkepnijn?hl=en)(For Chrome) - Edit and create cookies right in the Developer Tools.
     - [EditThisCookie](https://addons.mozilla.org/en-US/firefox/addon/editthiscookieaddon/)(For Firefox)
     - [Cookies Manager+](https://addons.mozilla.org/en-US/firefox/addon/cookies-manager-plus/) - To view, edit and create new cookies.
+    - [Vanilla Cookie Manager](https://chrome.google.com/webstore/detail/vanilla-cookie-manager/gieohaicffldbmiilohhggbidhephnjj?hl=en)(For Chrome) - A Cookie Whitelist Manager that helps protect your privacy. Automatically removes unwanted cookies.
 
 #### [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 

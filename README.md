@@ -28,7 +28,7 @@
     - [Cons](#cons-2)
     - [API](#api-2)
     - [Useful resources](#resources---more-on-sessionstorage)
-- [Comparison Table](comparison-table)
+- [Comparison Table](#comparison-table)
 - [PostMessage](#worth-mentioning-api-for-tackling-cross-origin-restriction)
     - [Pros](#pros-3)
     - [Cons](#cons-3)

@@ -238,6 +238,7 @@ Following are various storage techniques which HTML5 storage provides. Each tech
     - [Storing Data on The Client with LocalStorage](http://blog.teamtreehouse.com/storing-data-on-the-client-with-localstorage)
     - [Storing data in the browser with the HTML5 localStorage API](https://toddmotto.com/storing-data-in-the-browser-with-the-html5-local-storage-api/)
     - [Basket.js: A JavaScript loader with localStorage-based script caching](http://badassjs.com/post/40850339601/basketjs-a-javascript-loader-with)
+    - [Page Marks and Saved Browser Records](https://telegra.ph/A-reset-can-clear-page-marks-while-an-earlier-saved-record-remains-10-10) - A worked checklist example separating page reset from denied persistent cleanup, with a fictional model and clear verification limits.
 - Libraries
     - [angular-local-storage](https://github.com/grevory/angular-local-storage) - An AngularJS module that gives access to the browsers local storage with cookie fallback.
     - [react-native-localstorage](https://github.com/sunnylqm/react-native-storage) - Local storage wrapper for both react-native and browser.
